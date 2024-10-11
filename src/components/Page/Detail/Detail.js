@@ -20,7 +20,7 @@ const Detail = () => {
   );
 
   const findTrailer = dataTrailer.find((item) => item.type === "Trailer");
-  const trailer = findTrailer;
+  const trailer = findTrailer && findTrailer.key;
 
   return (
     <div className="container mt-5">
@@ -68,13 +68,10 @@ const Detail = () => {
         <Modal.Body>
           <iframe
             width="100%"
-            height="315"
+            height="500px"
             src={`https://www.youtube.com/embed/${trailer}`}
             title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
         </Modal.Body>
       </Modal>
