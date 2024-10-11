@@ -1,0 +1,49 @@
+.movie-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.movie-menu a {
+  font-weight: 600;
+  color: white;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.movie-menu a:hover {
+  color: yellow;
+}
+
+.icon-search i {
+  color: white;
+}
+
+.search {
+  width: 26%;
+}
+
+form.search input.search-form {
+  background-color: var(--secondarycolor);
+  border: 2px solid var(--primarycolor);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 10px;
+  outline: none;
+  padding: 8px 15px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+form.search input.search-form::placeholder {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+form.search .icon-search {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

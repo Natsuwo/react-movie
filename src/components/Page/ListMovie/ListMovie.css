@@ -1,0 +1,52 @@
+.list-movie-page .headline {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.list-movie-page .headline h3 {
+  font-size: 16px;
+  color: var(--primarycolor);
+}
+
+.list-movie-page .headline h1 {
+  font-size: 42px;
+  color: white;
+  font-weight: 600;
+}
+
+.list-movie-page .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.list-movie-page .card-list .card-movie {
+  width: calc(100% / 4 - 12px);
+}
+
+.list-movie-page .showmore {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-movie-page .showmore .showmore-btn {
+  background-color: #ffb703;
+  display: inline-block;
+  color: white;
+  margin: 40px auto;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 3px solid #ffb703;
+  transition: 500ms;
+}
+
+.list-movie-page .showmore .showmore-btn:hover {
+  background-color: #023047;
+}
+
+.list-movie-page .showmore .showmore-btn span {
+  margin-left: 12px;
+}

@@ -1,0 +1,44 @@
+.list-movie .headline {
+  text-align: center;
+}
+
+.list-movie .headline h3 {
+  font-size: 16px;
+  color: var(--primarycolor);
+}
+
+.list-movie .headline h2 {
+  font-size: 32px;
+  color: white;
+}
+
+.list-movie .cardlist {
+  display: flex;
+  gap: 16px;
+}
+
+.card-movie {
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.card-movie h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-movie .number {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.card-movie .number .rate {
+  color: var(--primarycolor);
+}
+
+.card-movie .thumb img {
+  border-radius: 8px;
+}
