@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./ListMovie.css";
 import CardMovie from "../../Global/CardMovie/CardMovie";
 import useFetch from "../../../features/useFetch";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const ListMovie = () => {
   const { slug: keySearch } = useParams();
-
+  const location = useLocation();
   const API_KEY = "e9e9d8da18ae29fc430845952232787c";
   const [page, setPage] = useState(1);
   const [allMovie, setAllMovie] = useState([]);
@@ -23,13 +23,14 @@ const ListMovie = () => {
       setPage(1);
     }
 
-    if ((prevSearch && page > 1) || !prevSearch) {
+    if (!keySearch && location.pathname === "/movies" && page <= 1) {
+      setAllMovie(movie);
+    } else if ((prevSearch && page > 1) || !keySearch) {
       setAllMovie([...allMovie, ...movie]);
     } else {
       setAllMovie(movie);
     }
     setPrevSearch(keySearch);
-    return () => {};
   }, [movie]);
 
   return (
